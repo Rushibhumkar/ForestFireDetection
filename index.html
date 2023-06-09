@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+    <title>Forest Fire Prediction</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+
+    html,
+    body {
+        height: 100%;
+        background-image: linear-gradient(tobottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)), url('/static/images/bg.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    h1 {
+        text-transform: uppercase;
+        letter-spacing: 10px;
+        word-spacing: 8px;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        margin: 10px0px;
+    }
+
+    input {
+        text-align: center;
+        padding: 10px30px;
+        margin: 10px 0px;
+        border-radius: 10px;
+        border: none;
+        box-shadow: 0px 0px 9px black;
+    }
+
+    button,
+    .btn {
+        margin-top: 10px;
+        padding: 10px 10px;
+        border-radius: 10px;
+        border: none;
+        background-color: rgb(0, 170, 255);
+        color: rgb(231, 53, 53);
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <h1>Forest Fire Prediction</h1>
+        <form>
+            <!-- <input type="text" name="Temperature" placeholder="TEMPERATURE" required="required" /><input type="text"
+                name="Oxygen" placeholder="OXYGEN" required="required" /><input type="text" name="Humidity"
+                placeholder="HUMIDITY" required="required" /> -->
+            <button type="submit" id="commandButton" class="btn btn-primarybtn-block btn-large">Detect Fire</button>
+        </form><br>
+        <h4 style="font-size: 2rem; color:white; font-weight: 800;">{{pred}}</h4><br>
+    </div>
+    <script>
+        document.getElementById('commandButton').addEventListener('click', function (e) {
+            e.preventDefault()
+            window.open('C:\Windows\System32\cmd.exe');
+
+        });
+    </script>
+</body>
+
+</html>
